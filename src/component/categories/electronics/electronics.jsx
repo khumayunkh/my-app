@@ -44,5 +44,5 @@ function Electronics(){
         </>
     )
 }
-// humoyun
+
 export default Electronics
