@@ -1,23 +1,21 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import { ItemsThunk } from "../../redux/ItemsReducer";
+import { applyMiddleware } from "@reduxjs/toolkit";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
-function Products(){
-    const dispatch = useDispatch()
-    
-    const Data = useSelector((state) => state.Products.datat)
-    const isLoading = useSelector((state) => state.Products.isLoading)
+export function Products(){
+    const [products, setProducts] = useState([])
 
-    // useEffect(()=>{
-    //     dispatch(ItemsThunk({data: image}))
-    // })
-
+    useEffect(() => {
+        axios.get(`https://fakestoreapi.com/products/category/`)
+        .then((res)=>{
+            setProducts(res.data)
+        })
+    },[])
     return(
         <div>
-            {/* { dispatch(ItemsThunk({data: image}))} */}
+            {products.map((products)=>{
+               <img src={products.image} />                 
+            })}    
         </div>
     )
 }
-
-export default Products

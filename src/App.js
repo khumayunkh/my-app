@@ -1,5 +1,5 @@
 import './App.css';
-import Products from './component/categories/AllProducts/Products';
+import {Products} from './component/categories/AllProducts/Products';
 import Electronics from './component/categories/electronics/electronics';
 import Header from './component/header/header';
 import Main from './component/main/main';
@@ -10,6 +10,7 @@ function App() {
       <Header/>
       <Main/>
       <Electronics/>
+      <Products/>
     </div>
   );
 }
