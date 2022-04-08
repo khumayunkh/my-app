@@ -1,0 +1,29 @@
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.header_in{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    background-color:white;
+}
+
+.logo{
+    max-width: 6%;
+    max-height: 6%;
+}
+
+.menu{
+    align-self: center;
+    font-size: 20px;
+    margin-left: 5%;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+.menu:hover{
+    color: rgb(177, 177, 177);
+}

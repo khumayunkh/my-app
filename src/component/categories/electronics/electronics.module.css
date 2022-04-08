@@ -1,0 +1,25 @@
+.header_in{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    margin-left: 5%;
+}
+button{
+    align-self: center;
+    width: 5%;
+    height: 30%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.electronics_in{
+    display: flex;
+    flex-direction: row;
+}
+
+img{
+    width: 10%;
+    height: 10%;
+}
