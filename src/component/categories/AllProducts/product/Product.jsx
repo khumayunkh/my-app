@@ -6,7 +6,7 @@ export function Product(props) {
     const [visible, setVisible] = useState(4) 
 
     const showMoreItems = () => {
-        setVisible((prevValue) => prevValue + 1)
+        setVisible((prevValue) => prevValue + 2)
     }
 
     const closeItems = () =>{
