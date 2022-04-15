@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import {Product} from './Product'
+import {Product} from '../product/Product'
 
 function fetchProducts(category){
    return  axios.get(`https://fakestoreapi.com/products/category/${category}`)
@@ -16,6 +16,7 @@ const CATEGORIES = [
 
 function ProductsDashboard(){
     const [products, setProducts] = useState([])
+   
     useEffect( () => {
         let responseProducts = []
         CATEGORIES.map(category => {
@@ -28,12 +29,14 @@ function ProductsDashboard(){
     }, [])
 
     return(
-        <div>
-
+        <>
             {products && products.map((product)=>(
+              
+           
                     <Product title={product.title} data={product.data}/>
+                    
                  ))}
-        </div>
+                 </>
     )
 }
 
