@@ -6,7 +6,7 @@ export function Product(props) {
     const [visible, setVisible] = useState(4) 
 
     const showMoreItems = () => {
-        setVisible((prevValue) => prevValue + 3)
+        setVisible((prevValue) => prevValue + 1)
     }
 
     const closeItems = () =>{
@@ -14,17 +14,17 @@ export function Product(props) {
     }
     return (
         <>
-             <div>
+             <div className={style.container}>
                 <h1 className={style.title}> {props.title}</h1>
                 <div>     
-                  <button className={style.bnt} onClick={showMoreItems}>See More</button>
-                  <button className={style.bnt} onClick={closeItems}>Close</button>
+                  <button className={style.btn} onClick={showMoreItems}>See More</button>
+                  <button className={style.btn} onClick={closeItems}>Close</button>
                 </div>
             </div>
         {
             props.data.slice(0, visible).map(
                 (item) => (
-                    <img className={style.img}  src={item.image}/>
+                        <img className={style.img}  src={item.image}/>
                 )
             )
         }
